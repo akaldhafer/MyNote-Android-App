@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyNote</string>
+    <string name="about">MyNote application help you to write your note then save in the cloud service encrypted and secure</string>
+
+</resources>
