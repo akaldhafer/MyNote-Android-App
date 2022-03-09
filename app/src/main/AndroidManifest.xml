@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mynote">
-    tools:ignore="ImpliedTouchscreenHardware,MissingLeanbackLauncher">
-
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
@@ -12,7 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
         <activity
-            android:name=".MainActivity"
+            android:name=".RegisterPage"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
