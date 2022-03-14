@@ -5,12 +5,19 @@
     <string name="login">LOGIN</string>
     <string name="register">SIGN UP</string>
     <string name="name">Name</string>
-    <string name="phone">Phone NO</string>
-    <string name="address">Address</string>
+    <string name="write">Write Note</string>
+    <string name="save">Save</string>
+
+    <string name="title">Note Title</string>
+    <string name="body">Type here..</string>
+    <string name="enterdetails">Enter note details</string>
+
+    <string name="recently">Recently</string>
     <string name="newaccount">Create new account!</string>
     <string name="haveccount">Already have account!</string>
     <string name="verifyEmail">Please check your email and click on the sent link to verify your account !</string>
     <string name="about">Write your notes in safe environment.</string>
+    <string name="text_body">Text Body</string>
 
 
 </resources>

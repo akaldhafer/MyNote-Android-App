@@ -66,6 +66,7 @@
         android:drawableTint="@color/white"
         android:text="@string/login"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:backgroundTint="@color/gold"
         app:layout_constraintBottom_toTopOf="@id/createAccount"
         app:layout_constraintEnd_toEndOf="parent"

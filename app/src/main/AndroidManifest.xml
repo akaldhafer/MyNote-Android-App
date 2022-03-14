@@ -20,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
         <activity
+            android:name=".activity.WriteNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".auth.VerifyEmail"
             android:exported="false" />
         <activity

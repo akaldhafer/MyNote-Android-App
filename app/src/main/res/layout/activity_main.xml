@@ -47,6 +47,7 @@
         android:text="@string/login"
         android:textStyle="bold"
         app:backgroundTint="@color/gold"
+        android:textColor="@color/white"
         android:onClick="onLoginActivity"
         app:layout_constraintBottom_toTopOf="@id/register"
         app:layout_constraintEnd_toEndOf="parent"

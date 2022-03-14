@@ -90,6 +90,7 @@
         android:drawableTint="@color/white"
         android:text="@string/register"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:textAlignment="center"
         app:backgroundTint="@color/gold"
         app:layout_constraintBottom_toTopOf="@id/login"

@@ -49,9 +49,7 @@ public class NoteFetchData implements NoteFetchDataPresenter{
                             noteViewFetchMessage.onUpdateFailure(e.getMessage().toString());
 
                         }
-
                     }
-
                 }
 
             }

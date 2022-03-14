@@ -47,6 +47,7 @@
         android:drawableTint="@color/white"
         android:text="@string/login"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:backgroundTint="@color/gold"
         android:onClick="onLoginActivity"
         app:layout_constraintBottom_toBottomOf="parent"
