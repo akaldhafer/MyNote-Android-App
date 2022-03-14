@@ -17,15 +17,17 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
 public class LoginPage extends AppCompatActivity {
     EditText email , password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar ().hide (); //This Line hides the action bar
+        Objects.requireNonNull(getSupportActionBar()).hide(); //This Line hides the action bar
         setContentView(R.layout.activity_login);
-        email = findViewById(R.id.text_email);
+        email = findViewById(R.id.email);
         password = findViewById(R.id.password);
     }
 
@@ -53,27 +55,36 @@ public class LoginPage extends AppCompatActivity {
             }
             if (TextUtils.isEmpty(uPassword)) {
                 password.setError("Password is required");
-                return;
             }
 
         }
     }
+
     void SignInWithEmailAndPassword(String uEmail, String uPassword){
         FirebaseAuth.getInstance().signInWithEmailAndPassword(uEmail,uPassword)
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        Toast.makeText(LoginPage.this, "Welcome Back", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginPage.this, HomePageActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        FirebaseAuth auth = FirebaseAuth.getInstance();
+                        boolean isVerified = Objects.requireNonNull(auth.getCurrentUser()).isEmailVerified();
+                        if(isVerified){
+                            Toast.makeText(LoginPage.this, "Welcome Back", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginPage.this, HomePageActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(LoginPage.this, "Please verify your email first", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginPage.this, VerifyEmail.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }
                         finish();
-                        //fetch the current user info decrpt
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(LoginPage.this, e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginPage.this, e.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });

@@ -18,6 +18,10 @@
     <string name="verifyEmail">Please check your email and click on the sent link to verify your account !</string>
     <string name="about">Write your notes in safe environment.</string>
     <string name="text_body">Text Body</string>
+    <string name="my_profile">My Profile</string>
+    <string name="vname">Name:</string>
+    <string name="not_found">Not found !</string>
+    <string name="vemail">Email:</string>
 
 
 </resources>
