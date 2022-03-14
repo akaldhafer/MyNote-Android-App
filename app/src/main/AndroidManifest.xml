@@ -20,10 +20,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
         <activity
-            android:name=".RegisterPage"
+            android:name=".auth.VerifyEmail"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name=".activity.HomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.RegisterPage"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

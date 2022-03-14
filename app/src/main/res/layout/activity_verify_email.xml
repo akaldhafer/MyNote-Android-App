@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".activity.MainActivity">
+    tools:context=".auth.VerifyEmail">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
@@ -13,7 +13,8 @@
         android:layout_height="450px"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
-        android:src="@drawable/image"
+        android:background="@drawable/verify"
+        android:backgroundTint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"
-        android:text="@string/about"
+        android:text="@string/verifyEmail"
         android:textAlignment="center"
         android:background="@drawable/background"
         android:backgroundTint="#3CF5F6F6"
@@ -48,7 +49,7 @@
         android:textStyle="bold"
         app:backgroundTint="@color/gold"
         android:onClick="onLoginActivity"
-        app:layout_constraintBottom_toTopOf="@id/register"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,15 +57,15 @@
         app:layout_constraintVertical_bias="0.287" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/register"
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:autoLink="web"
         android:text="@string/newaccount"
         android:textColorLink="@color/blue"
         android:textSize="18sp"
-        android:onClick="onRegisterActivity"
         android:textColor="#C9DDDD"
+        android:onClick="onRegisterActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

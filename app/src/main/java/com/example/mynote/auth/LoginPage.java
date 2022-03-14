@@ -1,4 +1,4 @@
-package com.example.mynote;
+package com.example.mynote.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mynote.R;
+import com.example.mynote.activity.HomePageActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -21,19 +23,20 @@ public class LoginPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
-        email = findViewById(R.id.edit_email_login);
-        password = findViewById(R.id.edit_password_login);
+        getSupportActionBar ().hide (); //This Line hides the action bar
+        setContentView(R.layout.activity_login);
+        email = findViewById(R.id.text_email);
+        password = findViewById(R.id.password);
     }
 
-    public void onClickRegisterButton(View view) {
+    public void onRegisterActivity(View view) {
         Intent intent = new Intent(LoginPage.this, RegisterPage.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }
 
-    public void onClickLoginButton(View view) {
+    public void onLoginActivity(View view) {
         validate();
     }
     void validate(){
@@ -61,6 +64,10 @@ public class LoginPage extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(LoginPage.this, "Welcome Back", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(LoginPage.this, HomePageActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
                         //fetch the current user info decrpt
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -81,4 +88,5 @@ public class LoginPage extends AppCompatActivity {
         finish();
 
     }
+
 }

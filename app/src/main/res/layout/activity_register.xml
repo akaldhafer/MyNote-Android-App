@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".auth.RegisterPage">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/text_name"
+        android:drawableTint="@color/gold"
+        android:drawableStart="@drawable/person"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/name"
+        android:textSize="16sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/text_email"
+        android:drawableTint="@color/gold"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/email"
+        android:textSize="16sp"
+
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background"
+        android:drawableStart="@drawable/password"
+        android:drawableTint="@color/gold"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_email"
+        app:layout_constraintVertical_bias="0.0"
+        app:passwordToggleEnabled="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:onClick="onRegisterActivity"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:drawableEnd="@drawable/simle"
+        android:drawableTint="@color/white"
+        android:text="@string/register"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:backgroundTint="@color/gold"
+        app:layout_constraintBottom_toTopOf="@id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.287" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login"
+        android:onClick="onLoginActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:autoLink="web"
+        android:text="@string/haveccount"
+        android:textColorLink="@color/blue"
+        android:textSize="18sp"
+        android:textColor="#C9DDDD"
+        android:backgroundTint="#3CF5F6F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.347" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

@@ -1,13 +1,22 @@
 package com.example.mynote.userapi;
 
 public class UserModel {
-    private String name, email, password, token;
+    private String name, email, password,imageUrl, token;
 
-    public UserModel(String name, String email, String password, String token) {
+    public UserModel(String name, String email, String password, String imageUrl, String token) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.imageUrl = imageUrl;
         this.token = token;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
