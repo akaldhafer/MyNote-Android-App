@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="start"
-    tools:context=".activity.WriteNoteActivity"
+    tools:context=".activity.ViewNote"
     android:background="@color/green">
 
     <TextView
@@ -16,10 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="18dp"
         android:layout_marginTop="31dp"
-        android:text="@string/write"
+        android:text="@string/update_note"
         android:textColor="@color/gold"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -28,8 +27,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="@color/red"
+        android:drawableEnd="@drawable/delete"
+        android:drawableTint="@color/white"
+        android:onClick="onDeleteNoteClick"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
     <TextView
-        android:id="@+id/txtDetail"
+        android:id="@+id/lastUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtTitle"
@@ -38,7 +55,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:inputType="textMultiLine"
-        android:text="@string/enterdetails"
+        android:text="@string/last_update_at"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,10 +64,10 @@
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
     <EditText
-        android:id="@+id/edTitle"
+        android:id="@+id/upTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDetail"
+        android:layout_below="@+id/lastUpdate"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
@@ -61,19 +78,19 @@
         android:textColor="@color/white"
         android:textColorHint="#BCFFFFFF"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@id/txtDetail" />
+        app:layout_constraintTop_toBottomOf="@id/lastUpdate" />
 
     <RelativeLayout
         android:id="@+id/field"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_below="@+id/edTitle"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upTitle"
         android:layout_marginTop="20dp"
         android:gravity="start"
-        app:layout_constraintTop_toBottomOf="@id/edTitle">
+        app:layout_constraintTop_toBottomOf="@id/upTitle">
 
         <EditText
-            android:id="@+id/edBody"
+            android:id="@+id/upBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -99,17 +116,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="21dp"
         android:backgroundTint="@color/gold"
-        android:drawableEnd="@drawable/write"
+        android:drawableEnd="@drawable/update"
         android:drawableTint="@color/white"
-        android:onClick="onSaveNoteClick"
-        android:text="@string/save"
+        android:onClick="onUpdateNoteClick"
+        android:text="@string/update"
         android:textColor="@color/white"
-        android:textSize="14dp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@id/field" />
 
 

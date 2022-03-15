@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
         <activity
+            android:name=".activity.ViewNote"
+            android:exported="false" />
+        <activity
             android:name=".activity.WriteNoteActivity"
             android:exported="false" />
         <activity

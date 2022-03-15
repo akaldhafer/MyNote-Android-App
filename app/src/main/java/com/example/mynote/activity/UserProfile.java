@@ -48,7 +48,7 @@ public class UserProfile extends AppCompatActivity {
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         email = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getEmail().trim();
         veEmail.setText(email);
-
+        //fetch user name
         FirebaseFirestore.getInstance().collection("UserData").document(email).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override

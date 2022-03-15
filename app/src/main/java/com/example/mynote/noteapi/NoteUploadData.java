@@ -22,9 +22,11 @@ public class NoteUploadData implements NoteDataPresenter, NoteViewMessage {
     //to upload to the firebase
     @Override
     public void onSuccessUpdate(Activity activity, String id, String userEmail, String title, String body, String token) {
-        UserModel userModel = new UserModel(id,userEmail,title,body,token);
+
+        NoteModel noteModel = new NoteModel(id,userEmail,title,body,token);
+
         FirebaseFirestore.getInstance().collection("NoteData").document(token)
-                .set(userModel, SetOptions.merge())
+                .set(noteModel, SetOptions.merge())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

@@ -40,7 +40,7 @@ public class NoteFetchData implements NoteFetchDataPresenter{
                         SymmtCrypto de = new SymmtCrypto();
 
                         try {
-                            NoteModel noteModel = new NoteModel(id, de.decrypt(userEmail),
+                            NoteModel noteModel = new NoteModel(id, userEmail,
                                     de.decrypt(title), de.decrypt(body),token);
                             noteViewFetchMessage.onUpdateSuccess(noteModel);
 
@@ -49,6 +49,7 @@ public class NoteFetchData implements NoteFetchDataPresenter{
                             noteViewFetchMessage.onUpdateFailure(e.getMessage().toString());
 
                         }
+
                     }
                 }
 

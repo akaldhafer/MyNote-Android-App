@@ -16,7 +16,7 @@
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.1985" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.342" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/drawable/profile.xml" value="0.1985" />
-        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_home_page.xml" value="0.33" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_home_page.xml" value="0.3176470588235294" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_login_page.xml" value="0.1" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -24,8 +24,9 @@
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_register_page.xml" value="0.22" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />
-        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_write_note.xml" value="0.33" />
-        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/note_cardview.xml" value="0.3625" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_view_note.xml" value="0.2921875" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/activity_write_note.xml" value="0.25" />
+        <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/layout/note_cardview.xml" value="0.1" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.342" />
         <entry key="..\:/Users/ak_al/Desktop/fyp work/MyNote Mobile Application/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.342" />
       </map>

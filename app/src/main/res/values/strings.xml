@@ -22,6 +22,11 @@
     <string name="vname">Name:</string>
     <string name="not_found">Not found !</string>
     <string name="vemail">Email:</string>
+    <string name="createat">createat</string>
+    <string name="update">Update</string>
+    <string name="update_note">Update Note</string>
+    <string name="delete">Delete</string>
+    <string name="last_update_at">Last update at:</string>
 
 
 </resources>

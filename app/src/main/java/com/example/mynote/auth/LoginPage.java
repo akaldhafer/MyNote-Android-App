@@ -41,6 +41,7 @@ public class LoginPage extends AppCompatActivity {
     public void onLoginActivity(View view) {
         validate();
     }
+
     void validate(){
         String uEmail = email.getText().toString().trim();
         String uPassword = password.getText().toString().trim();
